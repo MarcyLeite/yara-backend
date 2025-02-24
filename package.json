@@ -1,0 +1,28 @@
+{
+	"name": "yara-backend",
+	"version": "0.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "Marcy Leite",
+	"type": "module",
+	"main": "dist/main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon",
+		"build": "tsc & cp package.json dist/package.json && cp -r public/ dist/"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0",
+		"eslint": "^9.20.1",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.1",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.19.3",
+		"typescript": "^5.7.3"
+	},
+	"dependencies": {
+		"express": "^4.21.2",
+		"fast-glob": "^3.3.3",
+		"glob": "^11.0.1"
+	}
+}

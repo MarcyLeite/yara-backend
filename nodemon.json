@@ -1,0 +1,9 @@
+{
+	"$schema": "https://json.schemastore.org/nodemon.json",
+	"watch": ["src/**/*.ts"],
+	"ext": "ts",
+	"exec": "npx tsx src/main.ts",
+	"events": {
+		"start": "clear"
+	}
+}
