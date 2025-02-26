@@ -1,6 +1,14 @@
-FROM node:latest
+FROM node:latest AS build
 
-COPY dist /opt/yara-backend
+COPY . /yara-backend
+WORKDIR /yara-backend
+
+RUN npm i
+RUN npm run build
+
+FROM node:latest AS production
+
+COPY --from=build /yara-backend/dist /opt/yara-backend
 WORKDIR /opt/yara-backend
 
 EXPOSE 8080
